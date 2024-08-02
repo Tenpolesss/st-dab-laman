@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://images.pexels.com/photos/15215857/pexels-photo-15215857/free-photo-of-makanan-perak-lilin-ulang-tahun.jpeg');  /* Ganti URL dengan link gambar Anda */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Pacifico', cursive;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);  /* Tambahkan background putih dengan sedikit transparansi */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+h1 .bordered {
+    color: #ff69b4;  /* Warna teks utama */
+    text-shadow:
+        -1px -1px 0 #fff,  
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Pacifico', cursive;
+    position: relative;
+}
+
+.btn:active {
+    transform: scale(1.1);
+}
+
+.btn::after {
+    content: '❤️';
+    position: absolute;
+    opacity: 0;
+    1transform: scale(20);
+    transition: opacity 0s, transform 0.9s;
+}
+
+.btn:active::after {
+    opacity: 1;
+    transform: scale(1);
+}

@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+	background-image: url('https://images.pexels.com/photos/15215857/pexels-photo-15215857/free-photo-of-makanan-perak-lilin-ulang-tahun.jpeg');  /* Ganti URL dengan link gambar Anda */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);  /* Tambahkan background putih dengan sedikit transparansi */
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+.message-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.message-card {
+    background: #fff;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message-card h2 {
+    font-size: 1.5em;
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+.message-card p {
+    font-size: 1em;
+    color: #333;
+}
+.polaroid-container {
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px;
+    gap: 20px;
+}
+
+.polaroid {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.polaroid img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.caption {
+    margin-top: 10px;
+    color: #000;
+    font-size: 14px;
+}
+
+.btn-play {
+    font-size: 50px;
+    color: #FF0000;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: 20px;
+    
+    transition: transform 0.3s;
+    font-family: 'Dancing Script', cursive;
+}
+
+.btn-play:hover {
+    transform: scale(1.2);
+}
+
+
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Pacifico', cursive;
+    position: relative;
+    margin-top: 20px;
+}
+
+.btn:active {
+    transform: scale(1.1);
+}
+
+.btn::after {
+    content: '❤️';
+    position: absolute;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.btn:active::after {
+    opacity: 1;
+    transform: scale(1);
+}
